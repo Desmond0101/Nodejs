@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        nav {
+            background: #444;
+            color: #fff;
+            padding: 0.5rem 0;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 1rem;
+        }
+        nav a:hover {
+            text-transform: uppercase;
+        }
+        section {
+            margin: 2rem 0;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+        .card {
+            background: #f4f4f4;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            text-align: center;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const links = document.querySelectorAll("nav a");
+            links.forEach(link => {
+                link.addEventListener("click", (event) => {
+                    event.preventDefault();
+                    const section = document.querySelector(link.getAttribute("href"));
+                    section.scrollIntoView({ behavior: "smooth" });
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Portfolio</h1>
+        <p>Hi, I'm Tope Alabi. A passionate Full stack developer.</p>
+    </header>
+    
+    <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident, repudiandae eveniet. Culpa tenetur adipisci praesentium velit libero in corporis optio deleniti, eos ut nemo aut ullam, 
+                sed qui cumque numquam, vitae vero quos. Rerum sapiente totam sunt doloribus corporis quos.</p>
+
+                <div class="example">
+                    front-end 7 years experience  , Back-end- 5 years experince  ,Python - 2 years experince 
+                </div>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Project 1</h3>
+                    <h4>An Online store</h4>
+                    <p>[Brief description of the project]</p>
+                </div>
+                <div class="card">
+                    <h3>Project 2</h3>
+                    <h4>Weather app xusing html,css and JS</h4>
+                    <p>[Brief description of the project]</p>
+                </div>
+                <div class="card">
+                    <h3>Project 3</h3>
+                    <h4>Calclator using html,css and JS</h4>
+                    <p>[Brief description of the project]</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Feel free to reach out via email at <a href="mailto:your.email@example.com">your.email@example.com</a> or connect with me on <a href="#">LinkedIn</a>.</p>
+        </section>
+
+
+    <footer>
+        <p>&copy; 2024 Blake Griffin. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
